@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { Fragment, useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import MyVerticallyCenteredModal from './Component/Modal/Modal'
 
 function App() {
+  const [modalShow, setModalShow] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+
+      <div>
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+      </div>
+
+
+      {/*  <Card /> */}
+
+
+    </Fragment>
+  )
 }
 
 export default App;
