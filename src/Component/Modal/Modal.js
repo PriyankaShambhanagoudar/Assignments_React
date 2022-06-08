@@ -23,8 +23,13 @@ function MyVerticallyCenteredModal(props) {
         clickedCheckBox.checked = true
     })
 
+    // const submitHandler = (e) => {
+    //     e.preventDefault()
+    //     props.onHide = true
+    // }
 
     //Creating form
+    
     const FormCreate = (iplTeam, ind) => {
         return (
             <form key={ind}>
@@ -81,12 +86,13 @@ function MyVerticallyCenteredModal(props) {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button type="submit" onClick={props.onHide} >Continue</Button>
+                    {/* props.onHide */}
                 </Modal.Footer>
             </Modal>
 
             {/*  Adding form */}
             {<div>{arr.map((FormCreate))}</div>}
-            
+
         </div>
 
     );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap'
-import classes from './modal.module.css'
 
 
 const CardCreate = (props) => {
